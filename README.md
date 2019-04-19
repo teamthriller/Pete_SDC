@@ -2,7 +2,7 @@
 
 Pete's SDC
 **************************************
-*   GET ALL ALBUBMS BY ARTIST
+*   GET ALL ALBUMS BY ARTIST
 ***************************************
 ROUTE
     /ARTIST/{ID}/ALBUMS
@@ -16,7 +16,7 @@ ROUTE
     ...
     ]
 *************************************** 
-*    GET ALL ALBUMBS WITH ARTIST      *
+*    GET ALL ALBUBS WITH ARTIST      *
 ***************************************
   ROUTE
     /ARTIST/{ID}/ALBUMWARTIST
