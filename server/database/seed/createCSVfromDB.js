@@ -6,10 +6,10 @@ const {
 
 const pool = new Pool({
   user: CONFIG.DATABASE.USER,
-  host: 'localhost',
-  database: 'spotify',
-  password: '',
-  port: 5432,
+  host: CONFIG.DATABASE.HOST,
+  database: CONFIG.DATABASE.DATABASE,
+  password: CONFIG.DATABASE.PWD,
+  port: CONFIG.DATABASE.PORT,
 })
 
 sql = `copy artists to '/Users/peteknutson/ghrden01/Pete_SDC/server/database/artists.csv' DELIMITER ',' CSV HEADER;`;

@@ -32,7 +32,16 @@ let sql = `
         artistId integer,
         albumId integer,
         type int);
+
+        
       `
+
+
+CREATE TABLE ArtistNameAlbumName(
+  id serial PRIMARY KEY,
+  artistName VARCHAR(255),
+  albumName VARCHAR(255));
+
 
 // pool.query(sql, (err, res) => {
 //   //console.log(err, res)
@@ -71,10 +80,7 @@ const runQuery = (sql) => {
       resolve(res.rows[0].id);
     });
   });
-
-
 }
-
 
 sql = '';
 for (let i = 0; i < 10000; i++) {
@@ -93,9 +99,7 @@ for (let i = 0; i < 10000; i++) {
         pool.query(sql, (err, res) => {
           //console.log(err, res)
         })
-
       });
     }
   })
-
 }

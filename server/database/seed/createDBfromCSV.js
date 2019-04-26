@@ -1,16 +1,16 @@
 const CONFIG = require('../CONFIG');
-
 const {
   Pool,
 } = require('pg')
 
+
 const pool = new Pool({
   user: CONFIG.DATABASE.USER,
-  host: 'localhost',
-  database: 'spotify2',
-  password: '',
-  port: 5432,
-});
+  host: CONFIG.DATABASE.HOST,
+  database: CONFIG.DATABASE.DATABASE,
+  password: CONFIG.DATABASE.PWD,
+  port: CONFIG.DATABASE.PORT,
+})
 
 let sql = `DROP TABLE IF EXISTS artists;
 DROP TABLE IF EXISTS albums;
